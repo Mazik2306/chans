@@ -3,19 +3,23 @@
 The `chans` package provides generic channel operations to help you build concurrent pipelines in Go. It aims to be flexible, unopinionated, and composable, without over-abstracting or taking control away from the developer.
 
 ```go
-ctx := context.Background()
-words := make(chan string, 3)
+// Given a channel of documents.
+docs := make(chan []string, 10)
+docs <- []string{"go", "is", "awesome"}
+docs <- []string{"cats", "are", "cute"}
+close(docs)
 
-words <- "go"
-words <- "is"
-words <- "awesome"
+// Extract all words from the documents.
+words := make(chan string, 10)
+chans.Flatten(ctx, words, docs)
 close(words)
 
-fn := func(acc int, word string) int { return acc + len(word) }
-count := chans.Reduce(ctx, words, 0, fn)
+// Calculate the total byte count of all words.
+step := func(acc int, word string) int { return acc + len(word) }
+count := chans.Reduce(ctx, words, 0, step)
 
-fmt.Println("char count = ", count)
-// char count =  11
+fmt.Println("byte count =", count)
+// byte count = 22
 ```
 
 You can find function signatures and usage examples at the links below, or check out the full package [documentation](https://pkg.go.dev/github.com/nalgeon/chans).
