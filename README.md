@@ -103,7 +103,7 @@ You decide the rest:
 -   Want Map to be non-blocking? Run it in a goroutine.
 -   Don't want to exit early? Gather the errors instead of returning them.
 -   Want to buffer the output channel or keep it opened? You have full control.
--   Need to process input in parallel? Use `errorgroup`, or `sync.WaitGroup`, or any other implementation.
+-   Need to process input in parallel? Use `errgroup.Group`, or `sync.WaitGroup`, or any other implementation.
 
 The same applies to other channel operations.
 
