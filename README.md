@@ -2,6 +2,22 @@
 
 The `chans` package provides generic channel operations to help you build concurrent pipelines in Go. It aims to be flexible, unopinionated, and composable, without over-abstracting or taking control away from the developer.
 
+```go
+ctx := context.Background()
+words := make(chan string, 3)
+
+words <- "go"
+words <- "is"
+words <- "awesome"
+close(words)
+
+fn := func(acc int, word string) int { return acc + len(word) }
+count := chans.Reduce(ctx, words, 0, fn)
+
+fmt.Println("char count = ", count)
+// char count =  11
+```
+
 ## Features
 
 The golden trio:
@@ -44,7 +60,7 @@ Routing:
 
 ## Motivation
 
-I think most third-party concurrency packages are too opinionated and try to hide too much complexity. As a result, they end up being inflexible and do not work well in many different situations.
+I think third-party concurrency packages are often too opinionated and try to hide too much complexity. As a result, they end up being inflexible and don't fit a lot of use cases.
 
 For example, here's how you use the `Map` function from the [rill](https://github.com/destel/rill) package:
 
