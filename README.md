@@ -51,7 +51,7 @@ For example, here's how you use the `Map` function from the [rill](https://githu
 ```go
 // Concurrency = 3
 users := rill.Map(ids, 3, func(id int) (*User, error) {
-    return mockapi.GetUser(ctx, id)
+    return db.GetUser(ctx, id)
 })
 ```
 
@@ -69,8 +69,8 @@ While this approach works for many developers, I personally don't like it. With 
 For comparison, here's how you use the `chans.Map` function:
 
 ```go
-err := chans.Map(ctx, users, ids, func(id int) (*mockapi.User, error) {
-    return mockapi.GetUser(ctx, id)
+err := chans.Map(ctx, users, ids, func(id int) (*User, error) {
+    return db.GetUser(ctx, id)
 })
 ```
 
