@@ -18,45 +18,47 @@ fmt.Println("char count = ", count)
 // char count =  11
 ```
 
+You can find function signatures and usage examples at the links below, or check out the full package [documentation](https://pkg.go.dev/github.com/nalgeon/chans).
+
 ## Features
 
 The golden trio:
 
--   `Filter`: Sends values from the input channel to the output if a predicate returns true.
--   `Map`: Reads values from the input channel, applies a function, and sends the result to the output.
--   `Reduce`: Combines all values from the input channel into one using a function and returns the result.
+-   [Filter](https://pkg.go.dev/github.com/nalgeon/chans#Filter) sends values from the input channel to the output if a predicate returns true.
+-   [Map](https://pkg.go.dev/github.com/nalgeon/chans#Map) reads values from the input channel, applies a function, and sends the result to the output.
+-   [Reduce](https://pkg.go.dev/github.com/nalgeon/chans#Reduce) combines all values from the input channel into one using a function and returns the result.
 
 Filtering and sampling:
 
--   `FilterOut`: Ignores values from the input channel if a predicate returns true, otherwise sends them to the output.
--   `Drop`: Skips the first N values from the input channel and sends the rest to the output.
--   `DropWhile`: Skips values from the input channel as long as a predicate returns true, then sends the rest to the output.
--   `Take`: Sends up to N values from the input channel to the output.
--   `TakeNth`: Sends every Nth value from the input channel to the output.
--   `TakeWhile`: Sends values from the input channel to the output while a predicate returns true.
--   `First`: Returns the first value from the input channel that matches a predicate.
+-   [FilterOut](https://pkg.go.dev/github.com/nalgeon/chans#FilterOut) ignores values from the input channel if a predicate returns true, otherwise sends them to the output.
+-   [Drop](https://pkg.go.dev/github.com/nalgeon/chans#Drop) skips the first N values from the input channel and sends the rest to the output.
+-   [DropWhile](https://pkg.go.dev/github.com/nalgeon/chans#DropWhile) skips values from the input channel as long as a predicate returns true, then sends the rest to the output.
+-   [Take](https://pkg.go.dev/github.com/nalgeon/chans#Take) sends up to N values from the input channel to the output.
+-   [TakeNth](https://pkg.go.dev/github.com/nalgeon/chans#TakeNth) sends every Nth value from the input channel to the output.
+-   [TakeWhile](https://pkg.go.dev/github.com/nalgeon/chans#TakeWhile) sends values from the input channel to the output while a predicate returns true.
+-   [First](https://pkg.go.dev/github.com/nalgeon/chans#First) returns the first value from the input channel that matches a predicate.
 
 Batching and windowing:
 
--   `Chunk`: Groups values from the input channel into fixed-size slices and sends them to the output.
--   `ChunkBy`: Groups consecutive values from the input channel into slices whenever the key function's result changes.
--   `Flatten`: Reads slices from the input channel and sends their elements to the output in order.
+-   [Chunk](https://pkg.go.dev/github.com/nalgeon/chans#Chunk) groups values from the input channel into fixed-size slices and sends them to the output.
+-   [ChunkBy](https://pkg.go.dev/github.com/nalgeon/chans#ChunkBy) groups consecutive values from the input channel into slices whenever the key function's result changes.
+-   [Flatten](https://pkg.go.dev/github.com/nalgeon/chans#Flatten) reads slices from the input channel and sends their elements to the output in order.
 
 De-duplication:
 
--   `Compact`: Sends values from the input channel to the output, skipping consecutive duplicates.
--   `CompactBy`: Sends values from the input channel to the output, skipping consecutive duplicates as determined by a custom equality function.
--   `Distinct`: Sends values from the input channel to the output, skipping all duplicates.
--   `DistinctBy`: Sends values from the input channel to the output, skipping duplicates as determined by a key function.
+-   [Compact](https://pkg.go.dev/github.com/nalgeon/chans#Compact) sends values from the input channel to the output, skipping consecutive duplicates.
+-   [CompactBy](https://pkg.go.dev/github.com/nalgeon/chans#CompactBy) sends values from the input channel to the output, skipping consecutive duplicates as determined by a custom equality function.
+-   [Distinct](https://pkg.go.dev/github.com/nalgeon/chans#Distinct) sends values from the input channel to the output, skipping all duplicates.
+-   [DistinctBy](https://pkg.go.dev/github.com/nalgeon/chans#DistinctBy) sends values from the input channel to the output, skipping duplicates as determined by a key function.
 
 Routing:
 
--   `Broadcast`: Sends every value from the input channel to all output channels.
--   `Split`: Sends values from the input channel to output channels in round-robin fashion.
--   `Partition`: Sends values from the input channel to one of two outputs based on a predicate.
--   `Merge`: Concurrently sends values from multiple input channels to the output, with no guaranteed order.
--   `Concat`: Sends values from multiple input channels to the output, processing each input channel in order.
--   `Drain`: Consumes and discards all values from the input channel.
+-   [Broadcast](https://pkg.go.dev/github.com/nalgeon/chans#Broadcast) sends every value from the input channel to all output channels.
+-   [Split](https://pkg.go.dev/github.com/nalgeon/chans#Split) sends values from the input channel to output channels in round-robin fashion.
+-   [Partition](https://pkg.go.dev/github.com/nalgeon/chans#Partition) sends values from the input channel to one of two outputs based on a predicate.
+-   [Merge](https://pkg.go.dev/github.com/nalgeon/chans#Merge) concurrently sends values from multiple input channels to the output, with no guaranteed order.
+-   [Concat](https://pkg.go.dev/github.com/nalgeon/chans#Concat) sends values from multiple input channels to the output, processing each input channel in order.
+-   [Drain](https://pkg.go.dev/github.com/nalgeon/chans#Drain) consumes and discards all values from the input channel.
 
 ## Motivation
 
